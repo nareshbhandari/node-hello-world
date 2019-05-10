@@ -3,7 +3,7 @@ steps:
     args: ['build', '-t', 'gcr.io/high-hue-237416/node-hello-world', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ["push", "gcr.io/high-hue-237416/node-hello-world"]
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['beta', 'run', 'deploy', 'node-hello', '--namespace', 'run', '--image', 'gcr.io/high-hue-237416/node-hello-world', '--cluster', 'google-cluster', '--cluster-location', 'us-central1-c']
+  # - name: 'gcr.io/cloud-builders/gcloud'
+  #   args: ['beta', 'run', 'deploy', 'node-hello', '--namespace', 'run', '--image', 'gcr.io/high-hue-237416/node-hello-world', '--cluster', 'google-cluster', '--cluster-location', 'us-central1-c']
 images:
   - gcr.io/high-hue-237416/node-hello-world
